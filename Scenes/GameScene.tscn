@@ -6,7 +6,7 @@
 [ext_resource path="res://Scripts/GameState.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Shader.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/CRTFrame.png" type="Texture" id=6]
-[ext_resource path="res://GameObjects/Block.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GameObjects/LevelGenerator.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 540 )
@@ -21,20 +21,25 @@ script = ExtResource( 4 )
 anchor_mode = 0
 current = true
 
+[node name="LevelGenerator" parent="." instance=ExtResource( 7 )]
+
 [node name="Paddle" parent="." instance=ExtResource( 1 )]
 position = Vector2( 960, 1040 )
 
 [node name="PaddleLeft" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 40, 540 )
 rotation = 1.5708
 isVertical = true
 
 [node name="PaddleRight" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 1880, 540 )
 rotation = 1.5708
 isVertical = true
 
 [node name="PaddleTop" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 960, 40 )
 
 [node name="Balls" type="Node" parent="."]
@@ -46,150 +51,6 @@ can_sleep = false
 ballSpeed = 700
 
 [node name="Blocks" type="Node" parent="."]
-
-[node name="Block" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 576, 384 )
-
-[node name="Block2" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 640, 384 )
-
-[node name="Block3" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 640, 320 )
-
-[node name="Block10" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 576, 320 )
-
-[node name="Block9" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 576, 256 )
-
-[node name="Block8" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 640, 256 )
-
-[node name="Block6" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 704, 384 )
-
-[node name="Block5" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 768, 384 )
-
-[node name="Block4" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 768, 320 )
-
-[node name="Block13" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 704, 320 )
-
-[node name="Block12" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 704, 256 )
-
-[node name="Block11" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 768, 256 )
-
-[node name="Block24" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 832, 384 )
-
-[node name="Block23" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 896, 384 )
-
-[node name="Block22" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 896, 320 )
-
-[node name="Block21" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 832, 320 )
-
-[node name="Block20" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 832, 256 )
-
-[node name="Block19" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 896, 256 )
-
-[node name="Block18" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 960, 384 )
-
-[node name="Block17" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1024, 384 )
-
-[node name="Block7" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1024, 320 )
-
-[node name="Block16" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 960, 320 )
-
-[node name="Block15" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 960, 256 )
-
-[node name="Block14" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1024, 256 )
-
-[node name="Block36" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1088, 384 )
-
-[node name="Block35" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1152, 384 )
-
-[node name="Block34" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1152, 320 )
-
-[node name="Block33" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1088, 320 )
-
-[node name="Block32" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1088, 256 )
-
-[node name="Block31" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1152, 256 )
-
-[node name="Block30" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1216, 384 )
-
-[node name="Block29" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1280, 384 )
-
-[node name="Block28" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1280, 320 )
-
-[node name="Block27" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1216, 320 )
-
-[node name="Block26" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1216, 256 )
-
-[node name="Block25" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1280, 256 )
-
-[node name="Block48" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1344, 384 )
-
-[node name="Block47" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1408, 384 )
-
-[node name="Block46" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1408, 320 )
-
-[node name="Block45" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1344, 320 )
-
-[node name="Block44" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1344, 256 )
-
-[node name="Block43" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1408, 256 )
-
-[node name="Block42" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1472, 384 )
-
-[node name="Block41" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1536, 384 )
-
-[node name="Block40" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1536, 320 )
-
-[node name="Block39" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1472, 320 )
-
-[node name="Block38" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1472, 256 )
-
-[node name="Block37" parent="Blocks" instance=ExtResource( 7 )]
-position = Vector2( 1536, 256 )
 
 [node name="LeftWall" type="Node2D" parent="."]
 position = Vector2( -50, 540 )
@@ -230,7 +91,6 @@ position = Vector2( 0, -2 )
 shape = SubResource( 2 )
 
 [node name="CRT Frame" type="TextureRect" parent="."]
-visible = false
 margin_right = 1920.0
 margin_bottom = 1080.0
 texture = ExtResource( 6 )
@@ -240,9 +100,9 @@ __meta__ = {
 }
 
 [node name="CRT Shader" parent="." instance=ExtResource( 5 )]
-visible = false
 [connection signal="game_started" from="Paddle" to="Balls/Ball" method="_on_Paddle_game_started"]
 [connection signal="game_started" from="PaddleLeft" to="Balls/Ball" method="_on_Paddle_game_started"]
 [connection signal="game_started" from="PaddleRight" to="Balls/Ball" method="_on_Paddle_game_started"]
 [connection signal="game_started" from="PaddleTop" to="Balls/Ball" method="_on_Paddle_game_started"]
-[connection signal="body_entered" from="Balls/Ball" to="Blocks/Block" method="_on_Ball_body_entered"]
+
+[editable path="LevelGenerator"]
